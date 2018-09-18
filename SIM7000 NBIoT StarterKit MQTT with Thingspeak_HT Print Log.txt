@@ -1,0 +1,164 @@
+Sim7000 Starter kit initial success
+
+Waiting Module Ready
+
+loop
+RDY
+loop
++CFUN: 1
+AT
+OK
+
++CPIN: READY
+
+SMS Ready
+
+Sim7000 Start Succeed! 
+
+Check Model Version...
+
+AT+SIMCOMATI
+Revision:1351B05SIM7000E
+CSUB:V01
+APRev:1351B05SIM7000,V01
+QCN:MDM9206_SIM7000E_P1.02_20170707
+IMEI:865234030022197
+
+OK
+
+Check SIM Card...
+
+AT+CPIN?
++CPIN: READY
+
+OK
+
+Set LTE Mode
+AT+CNMP=38
+OK
+
+Set NBIOT Mode
+AT+CMNB=2
+OK
+
+Set APN!
+
+AT+CFUN=0
++CPIN: NOT READY
+
+OK
+AT+CGDCONT=1,"IP","E-IDEAS"
+OK
+
+AT+CFUN=1
+OK
++CPIN: READY
+
+SMS Ready
+
+Set Phone Functionality!
+
+AT+CFUN?
++CFUN: 1
+
+OK
+Check Signal of NBIoT!
+
+AT+CSQ
++CSQ: 99,99
+
+OK
+AT+CSQ
++CSQ: 99,99
+
+OK
+AT+CSQ
++CSQ: 27,99
+
+OK
+Signal Strength is approximately -59 dbm
+Network Registration Status
+AT+CGREG?
++CGREG: 0,2
+
+OK
+AT+CGREG?
++CGREG: 0,1
+
+OK
+Network Registered
+Inquiring UE system information
+AT+CPSI?
++CPSI: LTE NB-IOT,Online,525-01,0x0264,187916071,379,EUTRAN-BAND8,3716,0,0,-4,-70,-66,13
+
+OK
+Network Registered
+Operator Selection information
+AT+COPS?
++COPS: 0,0,"525 01 Singtel",9
+
+OK
+
+Show PDP Address
+AT+CGPADDR
++CGPADDR: 1,10.124.32.141
++CGPADDR: 13,0.0.0.0
+
+OK
+
+AT+SMSTATE?
++SMSTATE: 0
+
+OK
+
+HTU21DF Sensor Value
+Temperature: -46.85C
+Humidity: 37.63%RH
+field1=-46.85&field2=37.64
+
+AT+CNACT=2,"E-IDEAS"
+OK
+
++APP PDP: ACTIVE
+
+AT+CNACT?
++CNACT: 1,"10.124.32.141"
+
+OK
+
+AT+SMCONF="CLIENTID",ID
+OK
+
+AT+SMCONF="KEEPTIME",60
+OK
+
+AT+SMCONF="CLEANSS",1
+OK
+
+AT+SMCONF="URL","mqtt.thingspeak.com:1883"
+OK
+
+AT+SMCONN
+OK
+
+AT+SMSUB="channels/544857/subscribe/XML/OXPTE9Z6L32TANZ6",1
+OK
+
+AT+SMPUB="channels/544857/publish/YR2Y8P8K8B4ASYTQ",27,0,0
+>
+field1=-46.85&field2=37.64
+
+OK
+AT+SMSTATE?
++SMSTATE: 1
+
+OK
+
+AT+SMDISC
+OK
+
+AT+CNACT=0
+OK
+
++APP PDP: DEACTIVE
+
