@@ -16,7 +16,7 @@ SIM7000 NBIoT Starter kit MQTT demo with Thingspeak Borker
  * MCU collect Temperature and Humidity from HTU21DF 
  * send the datas to MQTT Broker of Thingspeak: https://thingspeak.com/channels/544857
  *  
- * Github: https://github.com/univsman/NBIOT-Starter-kit
+ * Github: https://github.com/univsman/SIM7000-NBIoT-StarterKit-TH
  * MQTT Broker : https://thingspeak.com/channels/544857
  *   
  * Author: Steven Li , Email : univsman@gmail.com
