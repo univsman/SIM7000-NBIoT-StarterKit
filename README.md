@@ -4,7 +4,7 @@ SIM7000 NBIoT Starter kit MQTT demo with Thingspeak Borker
  * This sketch design for demo SIMCOM 's SIM7000E NBIoT mdoule;
  * The hardware is SIM7000 NBIoT Starter kit;
  * The kit combine Arduino Leonardo and SIM7000 Sheild together,compatible with Arduino IED;
- * You can see the update from https://github.com/univsman/NBIOT-Starter-kit
+ * You can see the update from https://github.com/univsman/SIM7000-NBIoT-StarterKit-TH
  * The starter kit also integrated HTU21DF Temperature and Humidity sensor;
  * The SIM7000 support NBIoT , LTE Cat M1, GNSS and GSM;
  * AT+CMNB=2 was setted NBIoT, AT+CMNB=1 was setted LTE CAT M1;
